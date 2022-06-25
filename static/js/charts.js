@@ -100,7 +100,7 @@ function buildCharts(sample) {
       var barLayout = {
         title: {
            text: "Top 10 Bacteria Cultures Found ",   
-           font: {size: "30", color: "red"},        
+           font: {size: "25", color: "red"},        
         }, 
         paper_bgcolor: "lavender",
       };
@@ -117,6 +117,8 @@ function buildCharts(sample) {
           marker: {
           size: sampleValues,
           color: otuIds,
+          colorscale: 'Earth',
+
           }     
         }
       ];
@@ -125,7 +127,7 @@ function buildCharts(sample) {
       var bubbleLayout = {
         title: {
           text:'Bacteria Cultures Per Sample',
-          font: {size: "30", color: "red"},
+          font: {size: "25", color: "red"},
         },
         paper_bgcolor: "gold",
         xaxis: { title: "OTU ID"},
@@ -140,10 +142,10 @@ function buildCharts(sample) {
         {
           value: wash,
           title: { 
-            text: "Belly Button Washing Frequency",
-            font: {size: "30", color: "white"},            
+            text: "<b>Belly Button Washing Frequency</b><br>Scrubs per Week",
+            font: {size: "25", color: "white"},            
           },
-          subtitle:{text:"Scrubs per Week"},
+          // subtitle:{text:"Scrubs per Week"},
           
           type: "indicator",
           mode: "gauge+number",
